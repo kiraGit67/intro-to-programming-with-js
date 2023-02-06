@@ -52,3 +52,18 @@ console.log(sumOfCharacters(arr1));
 
 console.log(sumOfCharacters(arr2));
 // result should be: 55
+
+function sumOfChars(arr) {
+  let countOfChars = 0;
+
+  for (let item of arr) {
+    if (typeof item === "string") {
+      countOfChars += item.length;
+    }
+  }
+
+  return countOfChars;
+}
+
+console.log(sumOfChars(arr1));
+console.log(sumOfChars(arr2));
