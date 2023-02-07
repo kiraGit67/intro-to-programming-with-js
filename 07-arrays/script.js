@@ -6,7 +6,9 @@ const fruits = ["Watermelon", "Banana", "Cherry", "Kiwi", "Pineapple", "Apple"];
 console.log("Task 01) removeItem function");
 
 function removeItem(aray, position) {
-  return aray.slice(position);
+  const arayCopy = aray.slice();
+  arayCopy.splice(position - 1, 1);
+  return arayCopy;
 }
 
 console.log(removeItem(animals, 1));
