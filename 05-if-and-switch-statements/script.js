@@ -76,3 +76,48 @@ console.log(oldYoung(0));
 
 console.log(oldYoung(50));
 // result should be elder person
+
+// oldYoung function solved by switch-statement
+console.log("03a) oldYoungSwitch function");
+
+function oldYoungSwitch(age) {
+  let result;
+  switch (true) {
+    case age < 0 || typeof age === "string":
+      result = "invalid parameter";
+      break;
+    case age < 16 && age >= 0:
+      result = "children";
+      break;
+    case age < 50 && age >= 16:
+      result = "young person";
+      break;
+    default:
+      result = "elder person";
+  }
+  return result;
+}
+
+console.log(oldYoungSwitch(27));
+// result should be young person
+
+console.log(oldYoungSwitch(6));
+// result should be children
+
+console.log(oldYoungSwitch(-1));
+// result should be invalid parameter
+
+console.log(oldYoungSwitch(86));
+// result should be elder person
+
+console.log(oldYoungSwitch("72"));
+// result should be invalid parameter
+
+console.log(oldYoungSwitch(16));
+// result should be young person
+
+console.log(oldYoungSwitch(0));
+// result should be children
+
+console.log(oldYoungSwitch(50));
+// result should be elder person
